@@ -14,8 +14,7 @@ public class main {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
-        
+    public static void main(String[] args) {        
        
         ArvoreBinaria arvore = new ArvoreBinaria();   
 
@@ -43,6 +42,9 @@ public class main {
         System.out.println("\n-- Arvore --");
         arvore.printBinaryTree(arvore.getRaiz(), 0); 
 
-
+        arvore.removeNode(130);
+        System.out.println("\n-- Arvore --");
+        arvore.printBinaryTree(arvore.getRaiz(), 0); 
+        
     }    
 }
