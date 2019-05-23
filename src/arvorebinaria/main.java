@@ -42,31 +42,7 @@ public class main {
         System.out.println("\n-- Arvore --");
         arvore.printBinaryTree(arvore.getRaiz(), 0); 
         
-        /*
-        arvore.removeNode(120);
-        System.out.println("\n-- Arvore --");
-        arvore.printBinaryTree(arvore.getRaiz(), 0); 
-
-        arvore.removeNode(110);
-        System.out.println("\n-- Arvore --");
-        arvore.printBinaryTree(arvore.getRaiz(), 0); 
-        
-        arvore.removeNode(10);
-        System.out.println("\n-- Arvore --");
-        arvore.printBinaryTree(arvore.getRaiz(), 0); 
-        
-                arvore.removeNode(140);
-        System.out.println("\n-- Arvore --");
-        arvore.printBinaryTree(arvore.getRaiz(), 0); 
-        */
-       
-        arvore.removeNode2(arvore.getRaiz(), 130);
-        System.out.println("\n-- Arvore --");
-        arvore.printBinaryTree(arvore.getRaiz(), 0); 
-        
-        arvore.removeNode2(arvore.getRaiz(), 120);
-        System.out.println("\n-- Arvore --");
-        arvore.printBinaryTree(arvore.getRaiz(), 0); 
+      
         
         arvore.removeNode2(arvore.getRaiz(), 10);
         System.out.println("\n-- Arvore --");
