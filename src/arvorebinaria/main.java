@@ -64,6 +64,14 @@ public class main {
         System.out.println("\n-- Arvore --");
         arvore.printBinaryTree(arvore.getRaiz(), 0); 
         
+        arvore.removeNode2(arvore.getRaiz(), 120);
+        System.out.println("\n-- Arvore --");
+        arvore.printBinaryTree(arvore.getRaiz(), 0); 
+        
+        arvore.removeNode2(arvore.getRaiz(), 10);
+        System.out.println("\n-- Arvore --");
+        arvore.printBinaryTree(arvore.getRaiz(), 0); 
+        
         
     }    
 }

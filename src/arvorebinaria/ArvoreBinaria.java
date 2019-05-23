@@ -136,7 +136,7 @@ public class ArvoreBinaria  {
                     node = null;  
                 }  
                 else // um filho 
-                    System.out.println("node "+node.getInfo()+" sem filhos");
+                    System.out.println("node "+node.getInfo()+" possui um filho");
                     node = temp;  
                     System.out.println("node "+node.getInfo()+" movido para nova posicao");
             }  
@@ -197,99 +197,7 @@ public class ArvoreBinaria  {
         }   
         return node;  
     }     
-    
-    /*
-    public boolean removeNode(int info){
-        Node temp = raiz;
-        Node pai = raiz;
         
-        boolean esquerda = true;
-        
-        //Verificar se a node está esquerda ou direita
-        while(temp.getInfo() != info){
-            pai = temp;
-            
-            if(info < temp.getInfo()){
-                esquerda = true;
-                temp = temp.getEsquerda();
-            } else {
-                esquerda = false;
-                temp = temp.getDireita();
-            }
-            
-            if(temp == null)
-                return false;
-        }
-        
-        //Node raiz
-        if(temp.getEsquerda() == null && temp.getDireita() == null){
-            if(temp == raiz){
-                raiz = null;
-            } else if(esquerda){
-                pai.setEsquerda(null);
-            } else {
-                pai.setDireita(null);
-            }
-        }
-        
-        //Node raiz nao possui direita        
-        else if(temp.getDireita() == null){
-            if(temp == raiz){
-                raiz = temp.getEsquerda();
-            } else if(esquerda)
-                pai.setEsquerda(temp.getEsquerda());
-            
-            else pai.setDireita(temp.getEsquerda());
-        }
-        
-        //Node raiz nao possui esquerda        
-        else if(temp.getEsquerda() == null){
-            if(temp == raiz)
-                raiz = temp.getDireita();
-            
-            else if(esquerda){
-                pai.setEsquerda(temp.getDireita());
-            }            
-            else pai.setDireita(temp.getDireita());
-        }
-        
-        //Node centro (mover node direita para raiz e esquerda como filho direita)
-        else {
-            Node substituto = getNodeSubstituto(temp);
-            
-            if(temp == raiz)
-                raiz = substituto;
-            
-            else if(esquerda)
-                pai.setEsquerda(substituto);
-            
-            else
-                pai.setDireita(substituto);
-            
-            substituto.setEsquerda(temp.getEsquerda());            
-        }       
-        return true;
-    }    
-    */
-    
-    public Node getNodeSubstituto(Node temp){
-        Node substitutoPai = temp;
-        Node substituto = temp;        
-        Node filhoDireita = substituto.getDireita();
-        
-        while (filhoDireita != null){
-            substitutoPai = substituto; 
-            substituto = filhoDireita; 
-            filhoDireita = filhoDireita.getEsquerda(); 
-        }   
-        
-        if(substituto != temp.getDireita()){
-            substitutoPai.setEsquerda(substituto.getDireita());
-            substituto.setDireita(temp.getDireita());
-        }        
-        return substituto;
-    }
-    
     public int altura(){        
         if (raiz == null)
             return 0;
@@ -306,7 +214,7 @@ public class ArvoreBinaria  {
             return alturaEsquerda; }
         else            
         return alturaDireita;
-        }    
+    }    
     
     public int checkBalance(Node node){   
         if (node == null)
