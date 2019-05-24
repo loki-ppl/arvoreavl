@@ -92,15 +92,33 @@ public class ArvoreBinaria  {
     }
     
        // percorrer menor valor da arvore
-    Node minValueNode(Node node)  
+    public Node minValueNode(Node node)  
     {  
         Node temp = node;    
         // loop ate menor folha
         while (temp.getEsquerda() != null)  
-        temp = temp.getEsquerda();  
+        temp = temp.getEsquerda(); 
   
         return temp;  
     }  
+     
+    public boolean achaNode(int info) {		
+		Node temp = raiz;
+
+		while (temp.getInfo() != info) {			
+			if (info < temp.getInfo()) {
+				// menor que raiz
+                                temp = temp.getEsquerda();				
+			} else {
+				// maior que raiz
+                                temp = temp.getDireita();				
+			}
+			// nao achou
+			if (temp == null)
+				return false;
+		}
+		return true;
+	}   
     
     public Node removeNode2(Node node, int info){
      
@@ -114,7 +132,7 @@ public class ArvoreBinaria  {
     // se info a ser deletada é maior que a raiz, entao estara no lado direito
     else if( info > node.getInfo() )         
          node.setDireita(removeNode2(node.getDireita(),info));
-    // info = raiz
+    
     else
     {        
         // node com apenas um filho ou 0
@@ -140,9 +158,9 @@ public class ArvoreBinaria  {
                     System.out.println("\nnode "+node.getInfo()+" possui um filho");
                     node = temp;  
                     System.out.println("node "+node.getInfo()+" movido para nova posicao");
-        }
+                }
             }  
-            else
+        else
             {    
                 // dois filhos
                 // menor da direita
@@ -201,11 +219,9 @@ public class ArvoreBinaria  {
     }     
         
      public int altura(Node no) {
-
         if (no == null) {
             return -1;
         }
-
         if (altura(no.getEsquerda()) < altura(no.getDireita())) {
             return 1 + altura(no.getDireita());
         }
@@ -249,10 +265,10 @@ public class ArvoreBinaria  {
         }
         // Girar esquerda
         if (balance < -1 && info > node.getDireita().getInfo()) 
-            {
+        {
             System.out.println("gira esquerda");
             return girarEsquerda(node); 
-  }
+        }
         // direita esquerda
         if (balance > 1 && info > node.getEsquerda().getInfo()) { 
             System.out.println("gira direita2x");
@@ -270,50 +286,18 @@ public class ArvoreBinaria  {
         return node;            
     }     
     
-        /*
-    public void newNode(int info){
-        Node newNode = new Node(info);
-        
-        if(raiz == null){            
-            raiz = newNode;
-        } else {
-            Node temp = raiz;
-            Node pai;            
-            while(true){                
-                pai = temp;                
-                if(info < temp.getInfo()){
-                    temp = temp.getEsquerda();
-                    
-                    if(temp == null){
-                    pai.setEsquerda(newNode);
-                    return;
-                    }                    
-                    
-                } else {                    
-                    temp = temp.getDireita();
-                    if(temp == null){
-                        pai.setDireita(newNode);
-                        return;
-                    }
-                }                
-            }           
-        }        
-    } */
-    
     public Node girarEsquerda(Node raiz){
-        Node temp = raiz.getDireita();  
-        raiz.setDireita(temp.getEsquerda());
-        temp.setEsquerda(raiz);
-                
-        return temp;        
-    }  
-   
+        Node temp1 = raiz.getDireita();  
+        raiz.setDireita(temp1.getEsquerda());
+        temp1.setEsquerda(raiz);                
+        return temp1;        
+    }     
     
     public Node girarDireita(Node raiz){
-        Node temp = raiz.getEsquerda();
-        raiz.setEsquerda(temp.getDireita());
-        temp.setDireita(raiz);
-        return temp;        
+        Node temp2 = raiz.getEsquerda();
+        raiz.setEsquerda(temp2.getDireita());
+        temp2.setDireita(raiz);
+        return temp2;        
     }    
     
     public void printBinaryTree(Node temp, int level){   
