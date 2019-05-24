@@ -117,11 +117,13 @@ public class ArvoreBinaria  {
          node.setDireita(removeNode2(node.getDireita(),info));
     // info = raiz
     else
-    {  
+    {
+        
         // node com apenas um filho ou 0
         if((node.getEsquerda() == null) || (node.getDireita() == null) )
         {
                 Node temp = null;  
+                //node filho esquerda ou direita
                 if (temp == node.getEsquerda())  
                     temp = node.getDireita();  
                 else
@@ -130,14 +132,14 @@ public class ArvoreBinaria  {
                 // sem filho  
                 if (temp == null)  
                 { 
-                    System.out.println("node "+node.getInfo()+" sem filhos");
+                    System.out.println("\nnode "+node.getInfo()+" sem filhos");
                     System.out.println("node "+node.getInfo()+" removido");
                     temp = node;  
                     node = null;  
                 }  
                 else // um filho 
                 {
-                    System.out.println("node "+node.getInfo()+" possui um filho");
+                    System.out.println("\nnode "+node.getInfo()+" possui um filho");
                     node = temp;  
                     System.out.println("node "+node.getInfo()+" movido para nova posicao");
         }
@@ -146,7 +148,7 @@ public class ArvoreBinaria  {
             {    
                 // dois filhos
                 // menor da direita
-                System.out.println("node "+node.getInfo()+" possui dois filhos");
+                System.out.println("\nnode "+node.getInfo()+" possui dois filhos");
                 System.out.println("esquerda: "+ node.getEsquerda().getInfo());
                 System.out.println("direita: "+ node.getDireita().getInfo());
                 Node temp = minValueNode(node.getDireita());  
@@ -228,7 +230,7 @@ public class ArvoreBinaria  {
         System.out.println("\ninserindo node " +info);
         if(node == null){    
             System.out.println("node null");
-            System.out.println("inseriu " +info);
+            System.out.println("\ninseriu " +info);
             return (new Node(info));
         }
                 if(info < node.getInfo()){
@@ -245,7 +247,7 @@ public class ArvoreBinaria  {
         
         // se node estiver desbalanceado
         int balance = checkBalance(node); 
-        System.out.println("balance node "+node.getInfo()+": "+balance);
+        System.out.println("\nbalance node "+node.getInfo()+": "+balance);
         
         // Girar direita
         if (balance > 1 && info < node.getEsquerda().getInfo())    
@@ -307,10 +309,9 @@ public class ArvoreBinaria  {
     } */
     
     public Node girarEsquerda(Node raiz){
-        Node temp = raiz.getDireita();
-        Node temp2 = temp.getEsquerda();        
+        Node temp = raiz.getDireita();      
         temp.setEsquerda(raiz);
-        raiz.setDireita(temp2);        
+        raiz.setDireita(temp.getEsquerda());        
         return temp;        
     }  
     
