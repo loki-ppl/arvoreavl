@@ -18,22 +18,31 @@ public class main {
        
         ArvoreBinaria arvore = new ArvoreBinaria();   
 
-        arvore.setRaiz(arvore.newNodeAVL(arvore.getRaiz(),5));
+        arvore.newNodeAVL(10);
         System.out.println("\n/-----/ Arvore /-----/");
         arvore.printBinaryTree(arvore.getRaiz(), 0); 
-
-        arvore.setRaiz(arvore.newNodeAVL(arvore.getRaiz(),8));    
+        
+        arvore.newNodeAVL(9);
         System.out.println("\n/-----/ Arvore /-----/");
         arvore.printBinaryTree(arvore.getRaiz(), 0); 
-
-        arvore.setRaiz(arvore.newNodeAVL(arvore.getRaiz(),6));
+        
+        arvore.newNodeAVL(8);
         System.out.println("\n/-----/ Arvore /-----/");
-        arvore.printBinaryTree(arvore.getRaiz(), 0);         
+        arvore.printBinaryTree(arvore.getRaiz(), 0); 
+        
+        arvore.newNodeAVL(7);
+        System.out.println("\n/-----/ Arvore /-----/");
+        arvore.printBinaryTree(arvore.getRaiz(), 0); 
+        
+        arvore.newNodeAVL(6);
+        System.out.println("\n/-----/ Arvore /-----/");
+        arvore.printBinaryTree(arvore.getRaiz(), 0);
+        
+        arvore.newNodeAVL(5);
+        System.out.println("\n/-----/ Arvore /-----/");
+        arvore.printBinaryTree(arvore.getRaiz(), 0);
         
         System.out.println("acha ");
-        System.out.println(arvore.achaNode(4));
-
-      
-        
+        System.out.println(arvore.achaNode(4));  
     }    
 }
