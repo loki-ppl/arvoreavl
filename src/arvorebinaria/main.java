@@ -18,25 +18,24 @@ public class main {
        
         ArvoreBinaria arvore = new ArvoreBinaria();   
 
-        arvore.setRaiz(arvore.newNodeAVL(arvore.getRaiz(),120));
-        System.out.println("\n-- Arvore --");
+        arvore.setRaiz(arvore.newNodeAVL(arvore.getRaiz(),5));
+        System.out.println("\n/-----/ Arvore /-----/");
         arvore.printBinaryTree(arvore.getRaiz(), 0); 
 
-        arvore.setRaiz(arvore.newNodeAVL(arvore.getRaiz(),130));    
-        System.out.println("\n-- Arvore --");
+        arvore.setRaiz(arvore.newNodeAVL(arvore.getRaiz(),6));    
+        System.out.println("\n/-----/ Arvore /-----/");
         arvore.printBinaryTree(arvore.getRaiz(), 0); 
 
-        arvore.setRaiz(arvore.newNodeAVL(arvore.getRaiz(),140));
-        System.out.println("\n-- Arvore --");
+        arvore.setRaiz(arvore.newNodeAVL(arvore.getRaiz(),7));
+        System.out.println("\n/-----/ Arvore /-----/");
         arvore.printBinaryTree(arvore.getRaiz(), 0); 
 
-        arvore.setRaiz(arvore.newNodeAVL(arvore.getRaiz(),200));
-        System.out.println("\n-- Arvore --");
+        arvore.setRaiz(arvore.newNodeAVL(arvore.getRaiz(),8));
+        System.out.println("\n/-----/ Arvore /-----/");
         arvore.printBinaryTree(arvore.getRaiz(), 0);
-
         
-        arvore.setRaiz(arvore.removeNode2(arvore.getRaiz(), 120));
-        System.out.println("\n-- Arvore --");
+        arvore.setRaiz(arvore.removeNode2(arvore.getRaiz(), 5));
+        System.out.println("\n/-----/ Arvore /-----/");
         arvore.printBinaryTree(arvore.getRaiz(), 0); 
       
         

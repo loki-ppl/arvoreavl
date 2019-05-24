@@ -94,8 +94,7 @@ public class ArvoreBinaria  {
        // percorrer menor valor da arvore
     Node minValueNode(Node node)  
     {  
-        Node temp = node;  
-  
+        Node temp = node;    
         // loop ate menor folha
         while (temp.getEsquerda() != null)  
         temp = temp.getEsquerda();  
@@ -117,8 +116,7 @@ public class ArvoreBinaria  {
          node.setDireita(removeNode2(node.getDireita(),info));
     // info = raiz
     else
-    {
-        
+    {        
         // node com apenas um filho ou 0
         if((node.getEsquerda() == null) || (node.getDireita() == null) )
         {
@@ -202,23 +200,17 @@ public class ArvoreBinaria  {
         return node;  
     }     
         
-    public int altura(){        
-        if (raiz == null)
-            return 0;
-        return altura(raiz) -1;
-    }    
-    
-    public int altura(Node node){        
-        if (node == null)
-            return 0;
-        int alturaEsquerda = altura(node.getEsquerda()) + 1;
-        int alturaDireita = altura(node.getDireita()) + 1;
-        
-        if(alturaEsquerda > alturaDireita){            
-            return alturaEsquerda; }
-        else            
-        return alturaDireita;
-    }    
+     public int altura(Node no) {
+
+        if (no == null) {
+            return -1;
+        }
+
+        if (altura(no.getEsquerda()) < altura(no.getDireita())) {
+            return 1 + altura(no.getDireita());
+        }
+        return 1 + altura(no.getEsquerda());
+    }
     
     public int checkBalance(Node node){   
         if (node == null)
@@ -309,11 +301,13 @@ public class ArvoreBinaria  {
     } */
     
     public Node girarEsquerda(Node raiz){
-        Node temp = raiz.getDireita();      
+        Node temp = raiz.getDireita();  
+        raiz.setDireita(temp.getEsquerda());
         temp.setEsquerda(raiz);
-        raiz.setDireita(temp.getEsquerda());        
+                
         return temp;        
     }  
+   
     
     public Node girarDireita(Node raiz){
         Node temp = raiz.getEsquerda();
