@@ -30,7 +30,15 @@ public class main {
         System.out.println("\n/-----/ Arvore /-----/");
         arvore.printBinaryTree(arvore.getRaiz(), 0);        
         
+        /*
         System.out.println("acha ");
         System.out.println(arvore.achaNode(4));  
+
+        arvore.preOrder(arvore.getRaiz());
+        arvore.inOrder(arvore.getRaiz());
+        arvore.postOrder(arvore.getRaiz());
+        
+        */
+        
     }    
 }
