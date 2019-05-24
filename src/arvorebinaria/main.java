@@ -18,6 +18,7 @@ public class main {
        
         ArvoreBinaria arvore = new ArvoreBinaria();   
 
+         /*
         arvore.newNodeAVL(10);
         System.out.println("\n/-----/ Arvore /-----/");
         arvore.printBinaryTree(arvore.getRaiz(), 0); 
@@ -30,7 +31,7 @@ public class main {
         System.out.println("\n/-----/ Arvore /-----/");
         arvore.printBinaryTree(arvore.getRaiz(), 0);        
         
-        /*
+       
         System.out.println("acha ");
         System.out.println(arvore.achaNode(4));  
 
@@ -39,6 +40,18 @@ public class main {
         arvore.postOrder(arvore.getRaiz());
         
         */
+         
+                 arvore.insere(10);
+        System.out.println("\n/-----/ Arvore /-----/");
+        arvore.printBinaryTree(arvore.getRaiz(), 0); 
+        
+        arvore.insere(9);
+        System.out.println("\n/-----/ Arvore /-----/");
+        arvore.printBinaryTree(arvore.getRaiz(), 0); 
+        
+        arvore.insere(8);
+        System.out.println("\n/-----/ Arvore /-----/");
+        arvore.printBinaryTree(arvore.getRaiz(), 0);   
         
     }    
 }

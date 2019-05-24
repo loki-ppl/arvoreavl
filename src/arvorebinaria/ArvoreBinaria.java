@@ -240,6 +240,7 @@ public class ArvoreBinaria  {
         return (altura(node.getEsquerda()) - altura(node.getDireita()));             
     }     
     
+    /*
     public void newNodeAVL(int info) {        
         setRaiz(newNodeAVL(raiz,info));
     }
@@ -299,6 +300,41 @@ public class ArvoreBinaria  {
         }   
         return node;            
     }     
+*/
+    
+    public void insere(int info) {
+        raiz = insere(raiz,info);  
+    }
+    
+    public Node insere(Node atual, int info) {
+        Node no = new Node(info);
+        if (atual == null) {
+
+            atual = new Node(info);
+        }
+        else if( info<atual.getInfo()) atual.setEsquerda(insere(atual.getEsquerda(),info));
+        else if( info>atual.getInfo()) atual.setDireita(insere(atual.getDireita(),info));
+        atual = balanceamento(atual);
+        return atual;
+    }
+    
+    private Node balanceamento(Node no) {
+        if (checkBalance(no) == -2) {
+            //rotaçao a esquerda
+            no = girarEsquerda(no);
+        } else if (checkBalance(no) == 2) {
+            //rotaçao a direita
+
+                no = girarDireita(no);
+
+        } else {
+            if (no != null) {
+                balanceamento(no.getEsquerda());
+                balanceamento(no.getDireita());
+            }
+        }
+        return no;
+    }
     
     public Node girarEsquerda(Node raiz){
         Node temp1 = raiz.getDireita();  //cria novo node com direita da raiz 
