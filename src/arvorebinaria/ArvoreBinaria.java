@@ -136,10 +136,11 @@ public class ArvoreBinaria  {
                     node = null;  
                 }  
                 else // um filho 
-                
+                {
                     System.out.println("node "+node.getInfo()+" possui um filho");
                     node = temp;  
                     System.out.println("node "+node.getInfo()+" movido para nova posicao");
+        }
             }  
             else
             {    

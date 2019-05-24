@@ -32,22 +32,13 @@ public class main {
 
         arvore.setRaiz(arvore.newNodeAVL(arvore.getRaiz(),200));
         System.out.println("\n-- Arvore --");
-        arvore.printBinaryTree(arvore.getRaiz(), 0); 
+        arvore.printBinaryTree(arvore.getRaiz(), 0);
 
-        arvore.setRaiz(arvore.newNodeAVL(arvore.getRaiz(),1000));
-        System.out.println("\n-- Arvore --");
-        arvore.printBinaryTree(arvore.getRaiz(), 0); 
-
-        arvore.setRaiz(arvore.newNodeAVL(arvore.getRaiz(),10));
-        System.out.println("\n-- Arvore --");
-        arvore.printBinaryTree(arvore.getRaiz(), 0); 
         
+        arvore.setRaiz(arvore.removeNode2(arvore.getRaiz(), 120));
+        System.out.println("\n-- Arvore --");
+        arvore.printBinaryTree(arvore.getRaiz(), 0); 
       
-        
-        arvore.removeNode2(arvore.getRaiz(), 10);
-        System.out.println("\n-- Arvore --");
-        arvore.printBinaryTree(arvore.getRaiz(), 0); 
-        
         
     }    
 }
