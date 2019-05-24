@@ -28,19 +28,7 @@ public class main {
         
         arvore.newNodeAVL(8);
         System.out.println("\n/-----/ Arvore /-----/");
-        arvore.printBinaryTree(arvore.getRaiz(), 0); 
-        
-        arvore.newNodeAVL(7);
-        System.out.println("\n/-----/ Arvore /-----/");
-        arvore.printBinaryTree(arvore.getRaiz(), 0); 
-        
-        arvore.newNodeAVL(6);
-        System.out.println("\n/-----/ Arvore /-----/");
-        arvore.printBinaryTree(arvore.getRaiz(), 0);
-        
-        arvore.newNodeAVL(5);
-        System.out.println("\n/-----/ Arvore /-----/");
-        arvore.printBinaryTree(arvore.getRaiz(), 0);
+        arvore.printBinaryTree(arvore.getRaiz(), 0);        
         
         System.out.println("acha ");
         System.out.println(arvore.achaNode(4));  
