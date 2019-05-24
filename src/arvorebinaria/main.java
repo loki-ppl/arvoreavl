@@ -22,21 +22,17 @@ public class main {
         System.out.println("\n/-----/ Arvore /-----/");
         arvore.printBinaryTree(arvore.getRaiz(), 0); 
 
-        arvore.setRaiz(arvore.newNodeAVL(arvore.getRaiz(),6));    
+        arvore.setRaiz(arvore.newNodeAVL(arvore.getRaiz(),8));    
         System.out.println("\n/-----/ Arvore /-----/");
         arvore.printBinaryTree(arvore.getRaiz(), 0); 
 
-        arvore.setRaiz(arvore.newNodeAVL(arvore.getRaiz(),7));
+        arvore.setRaiz(arvore.newNodeAVL(arvore.getRaiz(),6));
         System.out.println("\n/-----/ Arvore /-----/");
-        arvore.printBinaryTree(arvore.getRaiz(), 0); 
-
-        arvore.setRaiz(arvore.newNodeAVL(arvore.getRaiz(),8));
-        System.out.println("\n/-----/ Arvore /-----/");
-        arvore.printBinaryTree(arvore.getRaiz(), 0);
+        arvore.printBinaryTree(arvore.getRaiz(), 0);         
         
-        arvore.setRaiz(arvore.removeNode2(arvore.getRaiz(), 5));
-        System.out.println("\n/-----/ Arvore /-----/");
-        arvore.printBinaryTree(arvore.getRaiz(), 0); 
+        System.out.println("acha ");
+        System.out.println(arvore.achaNode(4));
+
       
         
     }    
