@@ -233,38 +233,39 @@ public class ArvoreBinaria  {
     }     
         
     private Node balanceamento(Node no) {         
-        if (checkBalance(no) == -2) {
-            //rotaçao a esquerda
-            if (checkBalance(no.getDireita()) < 0) { 
-                System.out.println("\nbalanceado node: "+no.getInfo()+" : "+checkBalance(no));
-                System.out.println("gira esquerda");
-                no = girarEsquerda(no); 
-            }
-            else {
-                // direita esquerda
-                System.out.println("\n*caso especial pai -2 filho 1");
-                System.out.println("balanceado node: "+no.getInfo()+" : "+checkBalance(no));
-                System.out.println("balanceado node: "+no.getDireita().getInfo()+" : "+checkBalance(no.getDireita()));
-                System.out.println("gira esquerda 2x");
-                no.setDireita(girarDireita(no.getDireita()));             
-                return girarEsquerda(no);     
-            }           
- 
-        } else if (checkBalance(no) == 2) {
-            //rotaçao a direita
+        if (checkBalance(no) == 2) {
+            //rotaçao direita
             if (checkBalance(no.getEsquerda()) > 0) { 
                 System.out.println("\nbalanceado node: "+no.getInfo()+" : "+checkBalance(no));
                 System.out.println("gira direita");
-                no = girarEsquerda(no);                
+                no = girarDireita(no); 
             }
-            else
-                // esquerda direita
+            else {
+                // direita esquerda
                 System.out.println("\n*caso especial pai 2 filho -1");
                 System.out.println("balanceado node: "+no.getInfo()+" : "+checkBalance(no));
-                System.out.println("balanceado node: "+no.getEsquerda().getInfo()+" : "+checkBalance(no.getEsquerda()));
-                System.out.println("gira direita 2x");
+                System.out.println("balanceado node: "+no.getEsquerda().getInfo()+" : "+checkBalance(no.getEsquerda()));                 
+                System.out.println("gira esquerda 2x");                
                 no.setEsquerda(girarEsquerda(no.getEsquerda()));
-                return girarDireita(no);
+                return girarDireita(no);   
+            }           
+ 
+        } else if (checkBalance(no) == -2) {
+            //rotaçao esquerda
+            if (checkBalance(no.getDireita()) < 0) { 
+                System.out.println("\nbalanceado node: "+no.getInfo()+" : "+checkBalance(no));
+                System.out.println("gira esquerda");
+                no = girarEsquerda(no);                
+            }
+            else {
+                // esquerda direita
+                System.out.println("\n*caso especial pai -2 filho 1");
+                System.out.println("balanceado node: "+no.getInfo()+" : "+checkBalance(no));
+                System.out.println("balanceado node: "+no.getDireita().getInfo()+" : "+checkBalance(no.getDireita()));
+                no.setDireita(girarDireita(no.getDireita()));             
+                System.out.println("gira direita 2x");
+                return girarEsquerda(no);  
+            }
         }        
         return no;
     }
