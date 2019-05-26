@@ -24,26 +24,36 @@ public class main {
         arvore.postOrder(arvore.getRaiz());        
         */
          
-      
-    arvore.insere(5);
-        arvore.insere(4);
-        arvore.insere(3);
-        arvore.insere(2);
-        arvore.insere(1);
+         
+        arvore.insere(10);
+        System.out.println("\n/-----/ Arvore /-----/");
+        arvore.printBinaryTree(arvore.getRaiz(), 0); 
+        
+        arvore.insere(9);
+        System.out.println("\n/-----/ Arvore /-----/");
+        arvore.printBinaryTree(arvore.getRaiz(), 0); 
+        
+        arvore.insere(8);
+        System.out.println("\n/-----/ Arvore /-----/");
+        arvore.printBinaryTree(arvore.getRaiz(), 0);   
+        
         arvore.insere(7);
-        arvore.insere(6);
         System.out.println("\n/-----/ Arvore /-----/");
         arvore.printBinaryTree(arvore.getRaiz(), 0);   
-        arvore.removeNode(2);
-        arvore.removeNode(6);
         
-        System.out.println("\n/-----/ Arvore /-----/");
-        arvore.printBinaryTree(arvore.getRaiz(), 0);   
-
-        arvore.insere(2);
+        System.out.println(arvore.achaNode(9));
         
+        arvore.removeNode(9);
         System.out.println("\n/-----/ Arvore /-----/");
-        arvore.printBinaryTree(arvore.getRaiz(), 0);   
+        arvore.printBinaryTree(arvore.getRaiz(), 0); 
+                
+        arvore.removeNode(10);
+        System.out.println("\n/-----/ Arvore /-----/");
+        arvore.printBinaryTree(arvore.getRaiz(), 0);  
+        
+        System.out.println(arvore.achaNode(8));
+        System.out.println(arvore.achaNode(55));
+         
         
 
     }    
