@@ -19,29 +19,13 @@ public class main {
         ArvoreBinaria arvore = new ArvoreBinaria();   
 
          /*
-        arvore.newNodeAVL(10);
-        System.out.println("\n/-----/ Arvore /-----/");
-        arvore.printBinaryTree(arvore.getRaiz(), 0); 
-        
-        arvore.newNodeAVL(9);
-        System.out.println("\n/-----/ Arvore /-----/");
-        arvore.printBinaryTree(arvore.getRaiz(), 0); 
-        
-        arvore.newNodeAVL(8);
-        System.out.println("\n/-----/ Arvore /-----/");
-        arvore.printBinaryTree(arvore.getRaiz(), 0);        
-        
-       
-        System.out.println("acha ");
-        System.out.println(arvore.achaNode(4));  
-
         arvore.preOrder(arvore.getRaiz());
         arvore.inOrder(arvore.getRaiz());
-        arvore.postOrder(arvore.getRaiz());
-        
+        arvore.postOrder(arvore.getRaiz());        
         */
          
-                 arvore.insere(10);
+         /*
+        arvore.insere(10);
         System.out.println("\n/-----/ Arvore /-----/");
         arvore.printBinaryTree(arvore.getRaiz(), 0); 
         
@@ -53,5 +37,34 @@ public class main {
         System.out.println("\n/-----/ Arvore /-----/");
         arvore.printBinaryTree(arvore.getRaiz(), 0);   
         
+        arvore.insere(7);
+        System.out.println("\n/-----/ Arvore /-----/");
+        arvore.printBinaryTree(arvore.getRaiz(), 0);   
+        
+        System.out.println(arvore.achaNode(9));
+        
+        arvore.removeNode(9);
+        System.out.println("\n/-----/ Arvore /-----/");
+        arvore.printBinaryTree(arvore.getRaiz(), 0); 
+                
+        arvore.removeNode(10);
+        System.out.println("\n/-----/ Arvore /-----/");
+        arvore.printBinaryTree(arvore.getRaiz(), 0);  
+        
+        System.out.println(arvore.achaNode(8));
+        System.out.println(arvore.achaNode(55));*/
+         
+        arvore.insere(10);
+        System.out.println("\n/-----/ Arvore /-----/");
+        arvore.printBinaryTree(arvore.getRaiz(), 0); 
+        
+        arvore.insere(15);
+        System.out.println("\n/-----/ Arvore /-----/");
+        arvore.printBinaryTree(arvore.getRaiz(), 0); 
+        
+        arvore.insere(11);
+        System.out.println("\n/-----/ Arvore /-----/");
+        arvore.printBinaryTree(arvore.getRaiz(), 0);   
+
     }    
 }
