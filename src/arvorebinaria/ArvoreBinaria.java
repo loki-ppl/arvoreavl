@@ -283,7 +283,7 @@ public class ArvoreBinaria  {
         return temp2; //retorna nova raiz         
     }    
         
-    public void printBinaryTree(Node temp, int level){   //codigo por Anurag Agarwal
+    public void printBinaryTree(Node temp, int level){   //codigo por Anurag Agarwal - https://stackoverflow.com/a/17515532
         if(temp == null)
              return;
         printBinaryTree(temp.getDireita(), level+1);
