@@ -148,14 +148,14 @@ public class ArvoreBinaria  {
         raiz = insere(raiz,info);  
     }
     
-    public Node insere(Node atual, int info) {    
-        if (atual == null) {
-            atual = new Node(info);
+    public Node insere(Node no, int info) {    
+        if (no == null) {
+            no = new Node(info);
         }
-        else if( info<atual.getInfo()) atual.setEsquerda(insere(atual.getEsquerda(),info));
-        else if( info>atual.getInfo()) atual.setDireita(insere(atual.getDireita(),info));  
-        atual = balanceamento(atual);
-        return atual;
+        else if( info<no.getInfo()) no.setEsquerda(insere(no.getEsquerda(),info));
+        else if( info>no.getInfo()) no.setDireita(insere(no.getDireita(),info));  
+        no = balanceamento(no);
+        return no;
     }
     
     public void removeNode(int info) {
